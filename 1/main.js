@@ -52,40 +52,8 @@ const converter = (line) => {
     return newStr;
 }
 
-// const converter = (sting) => {
-//     let result = 0;
-//     let stringMatch = [];
-//     if(sting != '' && sting != undefined && sting.length > 2) {
-//         Object.keys(numberWords).some((el) => {
-//             let regex = new RegExp(el,'gm');
-//             let match = sting.match(regex);
-//             if (match && match .length > 0) {
-//                 stringMatch.push(...match);
-//                 return true;
-//             }
-//         });
-//         if (stringMatch.length > 0) {
-//             for (let i = 0; i < stringMatch.length; i++) {
-//                 let number = stringMatch[i];
-//                 if (number || number === 'zero') {
-//                     result += numberWords[number];
-//                 }
-//             }
-//         }
-//         return result ? parseInt(result) : null;
-//     }
-// }
-
 const main = async () => {
     const arr = await leggiFile(percorsoFile);
-    // const arr = ['two1nine',
-    //     'eightwothree',
-    //     'abcone2threexyz',
-    //     'xtwone3four',
-    //     '4nineeightseven2',
-    //     'zoneight234',
-    //     '7pqrstsixteen'];
-
     let number = calibration(arr);
     console.log(number);
 };
